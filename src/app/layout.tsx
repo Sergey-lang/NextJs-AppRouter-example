@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
+import { SW } from '@/components/SW';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -23,6 +24,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <html lang="en">
         <body className={inter.className}>
         <nav>
+            <SW />
             <ul className="border border-black p-4 flex justify-between">
                 <div className="flex gap-2">
                     {routes.map(({id, name, href}) => {
